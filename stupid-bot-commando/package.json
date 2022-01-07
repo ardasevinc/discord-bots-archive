@@ -1,0 +1,27 @@
+{
+  "name": "stupid-bot-commando",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --trace-warnings .",
+    "prod": "pm2 delete stupid_bot; pm2 start index.js --name stupid_bot"
+  },
+  "keywords": [],
+  "author": "Arda Sevinç <ardasevinc.technical@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "^0.12.3",
+    "dotenv": "^10.0.0",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "tournament-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --trace-warnings -r dotenv/config .",
+    "prod": "pm2 delete tournament_manager; DOTENV_CONFIG_PATH=$HOME/env/tournament_manager.env pm2 start --node-args '-r dotenv/config' --name tournament_manager index.js",
+    "dev": "pm2 delete tournament_manager_beta; pm2 start --node-args '-r dotenv/config' --name tournament_manager_beta index.js"
+  },
+  "keywords": [],
+  "author": "Arda Sevinç <ardasevinc.technical@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "chalk": "^4.1.1",
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "^0.12.3",
+    "dotenv": "^10.0.0",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "nodemon": "^2.0.7"
+  }
+}
